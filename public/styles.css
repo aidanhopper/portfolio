@@ -16,10 +16,6 @@ body {
   color: white;
 }
 
-.wave {
-  margin-left: 30px;
-  font-size: 1.5em;
-}
 
 main {
   margin: auto;
@@ -63,7 +59,7 @@ b {
 }
 
 .wave {
-  width: 2em;
+  width: 3em;
   margin-left: 70px;
   animation-name: wave-out;
   animation-duration: 10s;
@@ -74,7 +70,6 @@ b {
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 2;
-  animation-delay: 0s;
 }
 
 @keyframes wave-out {
