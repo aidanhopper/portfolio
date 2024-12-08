@@ -48,6 +48,59 @@ b {
   font-weight: 800;
 }
 
+.heading span {
+  height: 100%;
+  align-items: center;
+}
+
+.heading h1 {
+  margin-top: 0.5em;
+}
+
+.heading {
+  display: flex;
+  flex-flow: row;
+}
+
+.wave {
+  width: 2em;
+  margin-left: 70px;
+  animation-name: wave-out;
+  animation-duration: 10s;
+}
+
+.wave:hover {
+  animation-name: wave;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+  animation-delay: 0s;
+}
+
+@keyframes wave-out {
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: translate(-15px) rotate(-30deg),
+  }
+
+  60% {
+    transform: translate(15px) rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .current-page {
   color: #76CF3A;
 }
