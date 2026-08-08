@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Enable class-based dark mode selector in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Global Configurable Font Scale - Change --base-font-scale to proportionately scale ALL text across the entire portfolio! */
+:root {
+  --base-font-scale: 1.15;
+  /* Default 1.08 scales all typography proportionately by +8% */
+}
+
+html {
+  font-size: calc(16px * var(--base-font-scale));
+}
+
+@theme {
+  --font-serif: "Source Serif 4", Charter, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #18181b;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: #09090b;
+  color: #f4f4f5;
+}
+
+/* Mouse cursor text selection highlight */
+::selection {
+  background-color: rgba(14, 165, 233, 0.2);
+  /* Soft sky-500/20 tint in light mode */
+}
+
+.dark ::selection {
+  background-color: rgba(56, 189, 248, 0.3);
+  /* Inverted translucent sky blue tint in dark mode */
+  color: #ffffff;
+  /* Crisp white text in dark mode */
+}
+
+/* Print Stylesheet for clean 1-page paper resume output */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  header,
+  nav,
+  footer,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+}
