@@ -3,7 +3,7 @@ import React from 'react';
 export const title = "About";
 export const order = 1;
 
-/** Helper to parse **bold** tags cleanly in string paragraphs with crisp bold weight */
+/** Helper to parse **bold** tags cleanly in string paragraphs with heavy eye-catching bold weight */
 function formatText(text: string): React.ReactNode {
   const parts = text.split(/(\*\*.*?\*\*|`.*?`)/g);
   return parts.map((part, i) => {
@@ -37,7 +37,7 @@ export default function AboutPage({ onNavigateToProjects }: { onNavigateToProjec
   return (
     <section id="about" className="space-y-6">
       {/* Prose Body */}
-      <div className="space-y-5 font-serif text-lg sm:text-[19px] leading-relaxed text-zinc-900 dark:text-zinc-100">
+      <div className="space-y-5 font-serif text-lg sm:text-xl leading-relaxed text-zinc-900 dark:text-zinc-100">
         {paragraphs.map((pText, idx) => (
           <p key={idx}>{formatText(pText)}</p>
         ))}

@@ -103,13 +103,13 @@ export default function ExperiencePage() {
             </div>
 
             {job.summary && (
-              <p className="font-serif text-lg sm:text-[19px] text-zinc-900 dark:text-zinc-100 leading-relaxed">
+              <p className="font-serif text-lg sm:text-xl text-zinc-900 dark:text-zinc-100 leading-relaxed">
                 {formatText(job.summary)}
               </p>
             )}
 
             {job.highlights && job.highlights.length > 0 && (
-              <ul className="space-y-2 list-disc list-outside ml-5 font-serif text-lg sm:text-[19px] text-zinc-900 dark:text-zinc-100">
+              <ul className="space-y-2 list-disc list-outside ml-5 font-serif text-lg sm:text-xl text-zinc-900 dark:text-zinc-100">
                 {job.highlights.map((highlight, hIdx) => (
                   <li key={hIdx} className="leading-relaxed">
                     {formatText(highlight)}

@@ -1,18 +1,7 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
 /* Enable class-based dark mode selector in Tailwind v4 */
 @custom-variant dark (&:where(.dark, .dark *));
-
-/* Global Configurable Font Scale - Change --base-font-scale to proportionately scale ALL text across the entire portfolio! */
-:root {
-  --base-font-scale: 1.08;
-  /* Default 1.08 scales all typography proportionately by +8% */
-}
-
-html {
-  font-size: calc(16px * var(--base-font-scale));
-}
 
 @theme {
   --font-serif: "Source Serif 4", Charter, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -20,19 +9,30 @@ html {
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-body {
-  font-family: var(--font-sans);
-  background-color: #ffffff;
-  color: #18181b;
-  min-height: 100vh;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  :root {
+    --base-font-scale: 1.0;
+  }
 
-.dark body {
-  background-color: #09090b;
-  color: #f4f4f5;
+  html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #18181b;
+    min-height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark body {
+    background-color: #09090b;
+    color: #f4f4f5;
+  }
 }
 
 /* Mouse cursor text selection highlight */

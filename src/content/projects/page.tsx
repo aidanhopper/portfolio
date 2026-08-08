@@ -103,18 +103,18 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <p className="font-serif text-lg sm:text-[19px] text-zinc-900 dark:text-zinc-100 leading-relaxed font-normal">
+            <p className="font-serif text-lg sm:text-xl text-zinc-900 dark:text-zinc-100 leading-relaxed font-normal">
               {formatText(project.oneLiner)}
             </p>
 
             {project.description && (
-              <div className="font-serif text-lg sm:text-[19px] text-zinc-900 dark:text-zinc-100 leading-relaxed">
+              <div className="font-serif text-lg sm:text-xl text-zinc-900 dark:text-zinc-100 leading-relaxed">
                 {formatText(project.description)}
               </div>
             )}
 
             {project.highlights && project.highlights.length > 0 && (
-              <ul className="space-y-2 list-disc list-outside ml-5 font-serif text-lg sm:text-[19px] text-zinc-900 dark:text-zinc-100">
+              <ul className="space-y-2 list-disc list-outside ml-5 font-serif text-lg sm:text-xl text-zinc-900 dark:text-zinc-100">
                 {project.highlights.map((highlight, hIdx) => (
                   <li key={hIdx} className="leading-relaxed">
                     {formatText(highlight)}
