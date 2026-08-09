@@ -28,10 +28,11 @@ function formatText(text: string): React.ReactNode {
 export default function AboutPage({ onNavigateToProjects }: { onNavigateToProjects?: () => void }) {
   const paragraphs = [
     "Hi! I'm Aidan 👋",
-    "I'm a software developer at **IBM** working on **Storage Scale System** test infrastructure, focusing on cluster performance, virtualization, and automated testing platforms.",
-    "My work spans the full infrastructure stack, from **bare metal** and hypervisor configuration to CI platform-independent pipelines in **Ansible**. I author pipelines using a custom **YAML DSL** I built, which has been adopted org-wide to automate multi-node cluster builds, regression testing, and continuous deployment workflows.",
+    "I'm a Software Developer at **IBM** working on **Storage Scale System** test infrastructure, focusing on cluster performance, virtualization, and automated testing platforms.",
+    "My work spans the full infrastructure stack, from **bare metal** and hypervisor configuration to platform-independent pipelines powered by **Ansible**. These are written in my own custom **YAML DSL** and are adopted org-wide.",
     "I also engineer runtime tooling that enables **AI agents** to autonomously interact with live Storage Scale clusters for automated root cause analysis and cluster management.",
     "Previously, I built automated bare-metal testing infrastructure at **SEL**. Currently, I am pursuing an M.S. in Computer Science at **Georgia Tech**, holding a B.S. in Computer Science from **Washington State University**.",
+    "In my free time I enjoy working on personal projects for my home-lab and exploring the mountains around Tucson!"
   ];
 
   return (
@@ -42,19 +43,6 @@ export default function AboutPage({ onNavigateToProjects }: { onNavigateToProjec
           <p key={idx}>{formatText(pText)}</p>
         ))}
       </div>
-
-      {/* CTA Button */}
-      {onNavigateToProjects && (
-        <div className="pt-4 text-base font-sans text-zinc-900 dark:text-zinc-100">
-          <span>Want to see what I'm building on my own time? </span>
-          <button
-            onClick={onNavigateToProjects}
-            className="text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-300 underline underline-offset-4 font-medium transition-colors cursor-pointer"
-          >
-            Check out my featured projects →
-          </button>
-        </div>
-      )}
     </section>
   );
 }

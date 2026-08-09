@@ -54,11 +54,10 @@ const jobs: JobItem[] = [
       "QEMU/KVM",
       "Ansible",
       "Terraform",
-      "Linux/RHEL",
+      "Linux",
       "SR-IOV",
       "RDMA",
-      "tmux",
-      "Go",
+      "Bash"
     ],
   },
   {
@@ -75,11 +74,8 @@ const jobs: JobItem[] = [
     technologies: [
       "Python",
       "iPXE",
-      "Tiny Core Linux",
       "QEMU/KVM",
-      "Proxmox",
       "Bash",
-      "SSD Automation",
     ],
   },
 ];
